@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" time="0." timestamp="2024-05-08T08:19:40.081" name="AllTests">
+  <testsuite name="account_constructor" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2024-05-08T08:19:40.081">
+    <testcase name="test_1_creation_destruction" file="/home/bromastone/Documents/cpp-projects/accounts-manager-cli/tests/Account.test.cpp" line="5" status="run" result="completed" time="0." timestamp="2024-05-08T08:19:40.081" classname="account_constructor" />
+  </testsuite>
+</testsuites>

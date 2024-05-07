@@ -7,16 +7,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Defining source and test directories
-set(${src_dir} CMAKE_CURRENT_SOURCE_DIR)
-set(${test_dir} CMAKE_CURRENT_SOURCE_DIR/tests)
-
-# SOURCE
-add_executable(
-	int_add
-	${src_dir}/add.h
-	${src_dir}/add.cpp
-	${src_dir}/main.cpp
-)
+# set(include_dir "${CMAKE_CURRENT_SOURCE_DIR/include}")
+set(src_dir ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(test_dir ${CMAKE_CURRENT_SOURCE_DIR}/tests)
 
 # TESTING
 include(FetchContent)
@@ -30,16 +23,37 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(
-	int_add_test
-	src/add.h
-	src/add.cpp
-	${test_dir}/add.test.cpp
+    account_test
+    ${src_dir}/Account.cpp
+    ${test_dir}/Account.test.cpp
 )
 
 target_link_libraries(
-	int_add_test
+	account_test
 	GTest::gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(int_add_test)
+gtest_discover_tests(account_test)
+
+
+
+add_executable(
+    accounts_test
+    ${src_dir}/Account.cpp
+    ${src_dir}/Accounts.cpp
+    ${test_dir}/Accounts.test.cpp
+)
+
+target_link_libraries(
+	accounts_test
+	GTest::gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(accounts_test)
+
+
+
+# SOURCE TODO
+# add_executable()

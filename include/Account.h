@@ -10,7 +10,7 @@
 class Account {
 public:
     // Constructor
-    Account(uint32_t account_id, std::string account_name, std::vector<std::string> account_details, time_t account_time_last_edited);
+    explicit Account(uint32_t account_id, std::string account_name, std::vector<std::string> account_details, time_t account_time_last_edited);
 
     // Destructor
     ~Account();
@@ -26,9 +26,6 @@ public:
     void set_account_name(const std::string& account_name);
     void set_account_details(const std::vector<std::string>& account_details);
     void set_account_time_last_edited(const time_t& account_time_last_edited);
-
-    // Print account
-    void account_print_account();
 
 private:
     uint32_t account_id;
