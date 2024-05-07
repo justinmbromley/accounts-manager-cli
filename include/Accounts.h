@@ -6,6 +6,7 @@
 #include <string>
 #include <variant>
 #include <cstddef>
+#include <optional>
 
 #include "Account.h"
 
@@ -23,9 +24,9 @@ public:
      * Is Account ID already in use?
      * 
      * @param account_id The account ID you want to find if in use
-     * @return Returns true if account 
+     * @return Returns true if account
     */
-    bool is_account_id_valid(const uint32_t account_id) const;
+    bool is_account_id_unique(const uint32_t account_id) const;
 
     /**
      * Finds the account based on the Account ID
@@ -34,10 +35,11 @@ public:
      * @return Returns Account if account was found
      * @return Returns something if account was not found
     */
-    std::optional<Account&> accounts_get_account(const uint32_t account_id);
+    std::optional<Account> accounts_get_account(const uint32_t account_id) const;
+    
 
     // Adds a new account
-    void accounts_add_account(const std::string account_name, const std::string account_details);
+    void accounts_add_account(const std::string account_name, const std::vector<std::string> account_details);
 
     // Updates account specified
     void accounts_update_account(const uint32_t account_id);
