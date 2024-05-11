@@ -125,6 +125,7 @@ accounts_test: CMakeFiles/accounts_test.dir/src/Accounts.cpp.o
 accounts_test: CMakeFiles/accounts_test.dir/tests/Accounts.test.cpp.o
 accounts_test: CMakeFiles/accounts_test.dir/build.make
 accounts_test: lib/libgtest_main.a
+accounts_test: lib/libgmock.a
 accounts_test: lib/libgtest.a
 accounts_test: CMakeFiles/accounts_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable accounts_test"

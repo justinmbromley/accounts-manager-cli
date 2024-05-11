@@ -160,6 +160,7 @@ CMakeFiles/account_test.dir/clean:
 # Target rules for target CMakeFiles/accounts_test.dir
 
 # All Build rule for target.
+CMakeFiles/accounts_test.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 CMakeFiles/accounts_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/accounts_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_test.dir/build.make CMakeFiles/accounts_test.dir/depend
@@ -169,7 +170,7 @@ CMakeFiles/accounts_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/g
 
 # Build rule for subdir invocation for target.
 CMakeFiles/accounts_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/accounts_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles 0
 .PHONY : CMakeFiles/accounts_test.dir/rule
@@ -213,8 +214,8 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=10,11 "Built target gmock_main"

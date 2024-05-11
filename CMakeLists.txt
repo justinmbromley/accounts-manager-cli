@@ -48,9 +48,12 @@ add_executable(
 target_link_libraries(
 	accounts_test
 	GTest::gtest_main
+    gmock
 )
 
 include(GoogleTest)
+# target_link_libraries(your_test_executable gtest gmock)
+
 gtest_discover_tests(accounts_test)
 
 

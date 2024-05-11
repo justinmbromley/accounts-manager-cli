@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/_deps/googletest-src/googletest/include -isystem /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -isystem /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/_deps/googletest-src/googletest/include -isystem /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/_deps/googletest-src/googletest -isystem /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/_deps/googletest-src/googlemock/include -isystem /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/_deps/googletest-src/googlemock
 
 CXX_FLAGS = -std=gnu++17
 
