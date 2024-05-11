@@ -1,6 +1,7 @@
 #ifndef H
 #define H
 
+#include <iostream>
 #include <cstdint>
 #include <list>
 #include <string>
@@ -46,7 +47,7 @@ public:
     void delete_account(const uint32_t account_id);
 
     // Prints all accounts in alphabetical order
-    void print_accounts();
+    friend std::ostream& operator<<(std::ostream& os, const Accounts& accounts);
 
 private:
     // generates a new random 32 bit ID
