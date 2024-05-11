@@ -22,9 +22,9 @@ public:
 
     // a, u, f, d, p, i, e
     
+    // Adds a new account
+    void add_account(const std::string account_name, const std::vector<std::string> account_details);
 
-
-    
     /**
      * Finds the account based on the Account ID
      * 
@@ -34,14 +34,8 @@ public:
     */
     std::optional<Account> get_account(const uint32_t account_id) const;
 
-    // Adds a new account
-    void add_account(const std::string account_name, const std::vector<std::string> account_details);
-
     // Updates account specified
     void update_account(const uint32_t account_id);
-
-    // Lists Account Details
-    void print_account(const uint32_t account_id);
 
     // Deletes Account
     void delete_account(const uint32_t account_id);
