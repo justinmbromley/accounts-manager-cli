@@ -5,7 +5,7 @@
 #include "../include/Account.h"
 #include "../include/Accounts.h"
 
-
+// Constructor
 Accounts::Accounts() {
     std::list<Account> accounts;
 }
@@ -14,6 +14,8 @@ Accounts::Accounts() {
 Accounts::~Accounts() {
     std::cout << "Destructed accounts" << std::endl;
 }
+
+// 
 
 // generates a new 32 bit ID
 uint32_t Accounts::generate_new_id() {

@@ -279,5 +279,4 @@ CMakeFiles/account_test.dir/tests/Account.test.cpp.o: \
  /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
  /home/bromastone/Documents/cpp-projects/accounts-manager-cli/tests/../include/Accounts.h \
  /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
- /usr/include/c++/13/bits/list.tcc \
- /home/bromastone/Documents/cpp-projects/accounts-manager-cli/tests/../include/Account.h
+ /usr/include/c++/13/bits/list.tcc

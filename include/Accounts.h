@@ -8,8 +8,7 @@
 #include <cstddef>
 #include <optional>
 
-#include "Account.h"
-
+// #include "Account.h"
 class Account;
 
 class Accounts {
@@ -20,14 +19,11 @@ public:
     // Destructor
     ~Accounts();
 
-    /**
-     * Is Account ID already in use?
-     * 
-     * @param account_id The account ID you want to find if in use
-     * @return Returns true if account
-    */
-    bool is_account_id_unique(const uint32_t account_id) const;
+    // a, u, f, d, p, i, e
+    
 
+
+    
     /**
      * Finds the account based on the Account ID
      * 
@@ -36,7 +32,6 @@ public:
      * @return Returns something if account was not found
     */
     std::optional<Account> get_account(const uint32_t account_id) const;
-    
 
     // Adds a new account
     void add_account(const std::string account_name, const std::vector<std::string> account_details);
@@ -56,6 +51,14 @@ public:
 private:
     // generates a new random 32 bit ID
     uint32_t generate_new_id();
+
+    /**
+     * Is Account ID already in use?
+     * 
+     * @param account_id The account ID you want to find if in use
+     * @return Returns true if account
+    */
+    bool is_account_id_unique(const uint32_t account_id) const;
 
     std::list<Account> accounts;
 };
