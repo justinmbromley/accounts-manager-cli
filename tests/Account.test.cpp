@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "../include/Accounts.h"
+#include "../include/Account.h"
 
 // Tests the creation and destruction of Account with getters
 TEST(AccountConstructor, CreationGettersDestruction) {

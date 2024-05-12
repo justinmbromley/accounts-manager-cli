@@ -324,7 +324,7 @@ CMakeFiles/accounts_test.dir/tests/Accounts.test.cpp.o: \
  /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/_deps/googletest-src/googlemock/include/gmock/internal/custom/gmock-generated-actions.h \
  /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/_deps/googletest-src/googlemock/include/gmock/gmock-more-matchers.h \
  /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/_deps/googletest-src/googlemock/include/gmock/gmock-nice-strict.h \
+ /home/bromastone/Documents/cpp-projects/accounts-manager-cli/tests/../include/Account.h \
  /home/bromastone/Documents/cpp-projects/accounts-manager-cli/tests/../include/Accounts.h \
  /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
- /usr/include/c++/13/bits/list.tcc \
- /home/bromastone/Documents/cpp-projects/accounts-manager-cli/tests/../include/Account.h
+ /usr/include/c++/13/bits/list.tcc
