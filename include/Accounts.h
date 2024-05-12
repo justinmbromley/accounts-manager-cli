@@ -1,5 +1,5 @@
-#ifndef H
-#define H
+#ifndef ACCOUNTS_H
+#define ACCOUNTS_H
 
 #include <iostream>
 #include <cstdint>
@@ -20,34 +20,32 @@ public:
     // Destructor
     ~Accounts();
 
-    // a, u, f, d, p, i, e
-    
+    // Getter
+    std::list<Account> get_accounts() const;
 
+    // Add Account
+    void add_account(Account account);
 
-    
-    /**
-     * Finds the account based on the Account ID
-     * 
-     * @param account_id The account ID you want to get
-     * @return Returns Account if account was found
-     * @return Returns something if account was not found
-    */
-    std::optional<Account> get_account(const uint32_t account_id) const;
+    // Update an account
+    std::optional<Account> update_account(const uint32_t account_id);
 
-    // Adds a new account
-    void add_account(const std::string account_name, const std::vector<std::string> account_details);
+    // Gets an account from account_id
+    std::optional<Account> get_account(const uint32_t account_id);
 
-    // Updates account specified
-    void update_account(const uint32_t account_id);
-
-    // Lists Account Details
-    void print_account(const uint32_t account_id);
+    // Returns a list of Account objects from the name
+    std::optional<std::list<Account>> get_account_from_account_name(const std::string account_name);
 
     // Deletes Account
     void delete_account(const uint32_t account_id);
 
     // Prints all accounts in alphabetical order
     friend std::ostream& operator<<(std::ostream& os, const Accounts& accounts);
+
+    // Iterators
+    std::list<Account>::iterator begin() { return accounts.begin(); }
+    std::list<Account>::iterator end() { return accounts.end(); }
+    std::list<Account>::const_iterator cbegin() { return accounts.cbegin(); }
+    std::list<Account>::const_iterator cend() { return accounts.cend(); }
 
 private:
     // generates a new random 32 bit ID
@@ -64,4 +62,4 @@ private:
     std::list<Account> accounts;
 };
 
-#endif // H
+#endif // ACCOUNTS_H
