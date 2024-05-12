@@ -9,6 +9,11 @@
 //     Accounts accounts;
 // }
 
+TEST(Accounts, InsertionOperatorOverload) {
+    Accounts accounts;
+    
+}
+
 // // Tests if it gets the account
 // TEST(Accounts, AddAccount) {
 //     Accounts accounts;
