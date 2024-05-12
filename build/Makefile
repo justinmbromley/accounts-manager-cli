@@ -198,6 +198,19 @@ accounts_test/fast:
 .PHONY : accounts_test/fast
 
 #=============================================================================
+# Target rules for targets named account_id_generator_test
+
+# Build rule for target.
+account_id_generator_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 account_id_generator_test
+.PHONY : account_id_generator_test
+
+# fast build rule for target.
+account_id_generator_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_generator_test.dir/build.make CMakeFiles/account_id_generator_test.dir/build
+.PHONY : account_id_generator_test/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -276,6 +289,30 @@ src/Account.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_test.dir/build.make CMakeFiles/accounts_test.dir/src/Account.cpp.s
 .PHONY : src/Account.cpp.s
 
+src/AccountIDGenerator.o: src/AccountIDGenerator.cpp.o
+.PHONY : src/AccountIDGenerator.o
+
+# target to build an object file
+src/AccountIDGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_generator_test.dir/build.make CMakeFiles/account_id_generator_test.dir/src/AccountIDGenerator.cpp.o
+.PHONY : src/AccountIDGenerator.cpp.o
+
+src/AccountIDGenerator.i: src/AccountIDGenerator.cpp.i
+.PHONY : src/AccountIDGenerator.i
+
+# target to preprocess a source file
+src/AccountIDGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_generator_test.dir/build.make CMakeFiles/account_id_generator_test.dir/src/AccountIDGenerator.cpp.i
+.PHONY : src/AccountIDGenerator.cpp.i
+
+src/AccountIDGenerator.s: src/AccountIDGenerator.cpp.s
+.PHONY : src/AccountIDGenerator.s
+
+# target to generate assembly for a file
+src/AccountIDGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_generator_test.dir/build.make CMakeFiles/account_id_generator_test.dir/src/AccountIDGenerator.cpp.s
+.PHONY : src/AccountIDGenerator.cpp.s
+
 src/Accounts.o: src/Accounts.cpp.o
 .PHONY : src/Accounts.o
 
@@ -324,6 +361,30 @@ tests/Account.test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_test.dir/build.make CMakeFiles/account_test.dir/tests/Account.test.cpp.s
 .PHONY : tests/Account.test.cpp.s
 
+tests/AccountIDGenerator.test.o: tests/AccountIDGenerator.test.cpp.o
+.PHONY : tests/AccountIDGenerator.test.o
+
+# target to build an object file
+tests/AccountIDGenerator.test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_generator_test.dir/build.make CMakeFiles/account_id_generator_test.dir/tests/AccountIDGenerator.test.cpp.o
+.PHONY : tests/AccountIDGenerator.test.cpp.o
+
+tests/AccountIDGenerator.test.i: tests/AccountIDGenerator.test.cpp.i
+.PHONY : tests/AccountIDGenerator.test.i
+
+# target to preprocess a source file
+tests/AccountIDGenerator.test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_generator_test.dir/build.make CMakeFiles/account_id_generator_test.dir/tests/AccountIDGenerator.test.cpp.i
+.PHONY : tests/AccountIDGenerator.test.cpp.i
+
+tests/AccountIDGenerator.test.s: tests/AccountIDGenerator.test.cpp.s
+.PHONY : tests/AccountIDGenerator.test.s
+
+# target to generate assembly for a file
+tests/AccountIDGenerator.test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_generator_test.dir/build.make CMakeFiles/account_id_generator_test.dir/tests/AccountIDGenerator.test.cpp.s
+.PHONY : tests/AccountIDGenerator.test.cpp.s
+
 tests/Accounts.test.o: tests/Accounts.test.cpp.o
 .PHONY : tests/Accounts.test.o
 
@@ -361,6 +422,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... account_id_generator_test"
 	@echo "... account_test"
 	@echo "... accounts_test"
 	@echo "... gmock"
@@ -370,12 +432,18 @@ help:
 	@echo "... src/Account.o"
 	@echo "... src/Account.i"
 	@echo "... src/Account.s"
+	@echo "... src/AccountIDGenerator.o"
+	@echo "... src/AccountIDGenerator.i"
+	@echo "... src/AccountIDGenerator.s"
 	@echo "... src/Accounts.o"
 	@echo "... src/Accounts.i"
 	@echo "... src/Accounts.s"
 	@echo "... tests/Account.test.o"
 	@echo "... tests/Account.test.i"
 	@echo "... tests/Account.test.s"
+	@echo "... tests/AccountIDGenerator.test.o"
+	@echo "... tests/AccountIDGenerator.test.i"
+	@echo "... tests/AccountIDGenerator.test.s"
 	@echo "... tests/Accounts.test.o"
 	@echo "... tests/Accounts.test.i"
 	@echo "... tests/Accounts.test.s"
