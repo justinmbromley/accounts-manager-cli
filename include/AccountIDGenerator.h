@@ -1,5 +1,5 @@
-#ifndef ACCOUNTS_H
-#define ACCOUNTS_H
+#ifndef ACCOUNTIDGENERATOR_H
+#define ACCOUNTIDGENERATOR_H
 
 #include <cstdint>
 
@@ -12,7 +12,7 @@ public:
     ~AccountIDGenerator();
 
     // Generate a new Account ID
-    uint32_t generate_new_id();
+    uint32_t generate_new_id(); 
 };
 
-#endif // ACCOUNTS_H
+#endif // ACCOUNTIDGENERATOR_H

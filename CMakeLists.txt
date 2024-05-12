@@ -11,6 +11,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(src_dir ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set(test_dir ${CMAKE_CURRENT_SOURCE_DIR}/tests)
 
+
+
 # TESTING
 include(FetchContent)
 FetchContent_Declare(
@@ -28,16 +30,6 @@ add_executable(
     ${test_dir}/Account.test.cpp
 )
 
-target_link_libraries(
-	account_test
-	GTest::gtest_main
-)
-
-include(GoogleTest)
-gtest_discover_tests(account_test)
-
-
-
 add_executable(
     accounts_test
     ${src_dir}/Account.cpp
@@ -45,17 +37,32 @@ add_executable(
     ${test_dir}/Accounts.test.cpp
 )
 
-target_link_libraries(
-	accounts_test
-	GTest::gtest_main
-    gmock
+add_executable(
+    account_id_generator_test
+    ${src_dir}/AccountIDGenerator.cpp
+    ${test_dir}/AccountIDGenerator.test.cpp
 )
 
 include(GoogleTest)
-# target_link_libraries(your_test_executable gtest gmock)
 
+target_link_libraries(
+	accounts_test
+	GTest::gtest_main
+)
+
+target_link_libraries(
+	account_test
+	GTest::gtest_main
+)
+
+target_link_libraries(
+	account_id_generator_test
+	GTest::gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(account_test)
 gtest_discover_tests(accounts_test)
-
 
 
 # SOURCE TODO
