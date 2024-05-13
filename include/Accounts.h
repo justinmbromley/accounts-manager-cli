@@ -48,17 +48,6 @@ public:
     std::list<Account>::const_iterator cend() { return accounts.cend(); }
 
 private:
-    // generates a new random 32 bit ID
-    uint32_t generate_new_id();
-
-    /**
-     * Is Account ID already in use?
-     * 
-     * @param account_id The account ID you want to find if in use
-     * @return Returns true if account
-    */
-    bool is_account_id_unique(const uint32_t account_id) const;
-
     std::list<Account> accounts;
 };
 
