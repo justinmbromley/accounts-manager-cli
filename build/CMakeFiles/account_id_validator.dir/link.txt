@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/account_id_validator.dir/src/AccountIDValidator.cpp.o CMakeFiles/account_id_validator.dir/tests/AccountIDValidator.test.cpp.o -o account_id_validator  lib/libgtest_main.a lib/libgtest.a
