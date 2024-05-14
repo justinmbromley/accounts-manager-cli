@@ -30,7 +30,7 @@
         void set_account_time_last_edited(const time_t& account_time_last_edited);
 
         // Equality operator overload
-        bool operator==(const Account& account) const;
+        bool operator==(const Account& acc) const;
 
         // Inequality operator overload
         bool operator!=(const Account& account) const;
