@@ -16,7 +16,10 @@ const std::list<Account>& Accounts::get_accounts() const {
     return accounts;
 }
 
-
+// Add Account
+void add_account(Account account) const {
+    
+}
 
 std::ostream& operator<<(std::ostream& os, const Accounts& accounts) {
     
