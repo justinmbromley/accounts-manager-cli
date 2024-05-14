@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <cstdint>
-#include <list>
+#include <vector>
 #include <string>
 #include <variant>
 #include <cstddef>
@@ -21,25 +21,25 @@ public:
     ~Accounts();
 
     // Getter
-    const std::list<Account>& get_accounts() const;
+    const std::vector<Account>& get_accounts() const;
 
     // Add Account
     void add_account(Account account);
 
     // Update an account
-    void delete_account(std::list<Account>::iterator it);
+    void delete_account(std::vector<Account>::iterator it);
 
     // Prints all accounts in alp   habetical order
     friend std::ostream& operator<<(std::ostream& os, const Accounts& accounts);
 
     // Iterators
-    std::list<Account>::iterator begin() { return accounts.begin(); }
-    std::list<Account>::iterator end() { return accounts.end(); }
-    std::list<Account>::const_iterator cbegin() { return accounts.cbegin(); }
-    std::list<Account>::const_iterator cend() { return accounts.cend(); }
+    std::vector<Account>::iterator begin() { return accounts.begin(); }
+    std::vector<Account>::iterator end() { return accounts.end(); }
+    std::vector<Account>::const_iterator cbegin() { return accounts.cbegin(); }
+    std::vector<Account>::const_iterator cend() { return accounts.cend(); }
 
 private:
-    std::list<Account> accounts;
+    std::vector<Account> accounts;
 };
 
 #endif // ACCOUNTS_H
