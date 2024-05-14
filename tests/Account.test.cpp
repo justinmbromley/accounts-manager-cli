@@ -17,6 +17,20 @@ TEST(AccountConstructor, CreationGettersDestruction) {
     EXPECT_EQ(account.get_account_time_last_edited(), random_time);
 }
 
+TEST(AccountCopyConstructor, CopyTestSimple) {
+    uint32_t account_id = 31293;
+    std::string account_name = "Bobby Smith";
+    std::vector<std::string> account_details = { "Username: bobsmith23", "Password: hungrybob02" };
+    time_t random_time = 1234;
+
+    Account account(account_id, account_name, account_details, random_time);
+    
+    EXPECT_EQ(account.get_account_id(), account_id);
+    EXPECT_EQ(account.get_account_name(), account_name);
+    EXPECT_EQ(account.get_account_details(), account_details);
+    EXPECT_EQ(account.get_account_time_last_edited(), random_time);
+}
+
 // Tests the setters of Account
 TEST(AccountSetters, ChangeVariables) {
     uint32_t account_id = 39293;
