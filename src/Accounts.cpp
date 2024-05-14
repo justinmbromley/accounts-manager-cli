@@ -17,7 +17,7 @@ const std::list<Account>& Accounts::get_accounts() const {
 }
 
 // Add Account
-void add_account(Account account) const {
+void Accounts::add_account(Account account) const {
     
 }
 
