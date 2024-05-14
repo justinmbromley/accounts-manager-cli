@@ -33,13 +33,21 @@ TEST(AccountCopyConstructor, SimpleTest) {
     EXPECT_EQ(account_1.get_account_time_last_edited(), account_2.get_account_time_last_edited());
 }
 
-// // Test the equality operator overload
-// TEST(AccountEqualityOperator, AccountsAreEqual) {
-//     Account account_1(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
-//     Account account_2(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
+// Test the equality operator overload
+TEST(AccountEqualityOperator, AccountsAreEqual) {
+    Account account_1(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
+    Account account_2(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
     
-//     EXPECT_TRUE(account_1 == account_2);
-// }
+    EXPECT_TRUE(account_1 == account_2);
+}
+
+// Test the equality operator overload
+TEST(AccountEqualityOperator, AccountsAreNotEqual) {
+    Account account_1(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
+    Account account_2(1984, "Stake", { "Email: Jordan Bellton", "Username: jbellton24", "Password: jbjbjbjb", "Password: Goodstuff" }, 4321);
+    
+    EXPECT_TRUE(!(account_1 == account_2));
+}
 
 // Tests the setters of Account
 TEST(AccountSetters, ChangeVariables) {
