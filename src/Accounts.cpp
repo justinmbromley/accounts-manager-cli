@@ -17,7 +17,7 @@ const std::vector<Account>& Accounts::get_accounts() const {
 }
 
 // Add Account
-void Accounts::add_account(Account account) {
+void Accounts::add_account(Account account) const {
 
 }
 

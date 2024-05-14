@@ -21,9 +21,8 @@ TEST(AddAccount, AddingOneAccount) {
     std::vector<Account> result_vector = accounts.get_accounts();
     std::cout << "RESULT SIZE: " << result_vector.size() << std::endl;
 
-    // EXPECT_EQ(result_vector[0], account);
+    
 }
-
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);

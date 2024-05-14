@@ -24,10 +24,10 @@ public:
     const std::vector<Account>& get_accounts() const;
 
     // Add Account
-    void add_account(Account account);
+    void add_account(Account account) const;
 
-    // Update an account
-    void delete_account(std::vector<Account>::iterator it);
+    // Deletes an account
+    void delete_account(std::vector<Account>::iterator it) const;
 
     // Prints all accounts in alp   habetical order
     friend std::ostream& operator<<(std::ostream& os, const Accounts& accounts);
@@ -35,8 +35,8 @@ public:
     // Iterators
     std::vector<Account>::iterator begin() { return accounts.begin(); }
     std::vector<Account>::iterator end() { return accounts.end(); }
-    std::vector<Account>::const_iterator cbegin() { return accounts.cbegin(); }
-    std::vector<Account>::const_iterator cend() { return accounts.cend(); }
+    std::vector<Account>::const_iterator cbegin() const { return accounts.cbegin(); }
+    std::vector<Account>::const_iterator cend() const { return accounts.cend(); }
 
 private:
     std::vector<Account> accounts;
