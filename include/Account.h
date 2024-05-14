@@ -11,6 +11,9 @@
         // Constructor
         explicit Account(uint32_t account_id, std::string account_name, std::vector<std::string> account_details, time_t account_time_last_edited);
 
+        // Copy Constructor
+        Account(const Account& account);
+
         // Destructor
         ~Account();
 
@@ -25,6 +28,12 @@
         void set_account_name(const std::string& account_name);
         void set_account_details(const std::vector<std::string>& account_details);
         void set_account_time_last_edited(const time_t& account_time_last_edited);
+
+        // Equality operator overload
+        bool operator==(const Account& account) const;
+
+        // Inequality operator overload
+        bool operator!=(const Account& account) const;
 
     private:
         uint32_t account_id;
