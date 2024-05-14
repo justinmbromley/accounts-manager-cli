@@ -27,18 +27,9 @@ public:
     void add_account(Account account);
 
     // Update an account
-    std::optional<Account> update_account(const uint32_t account_id);
+    void delete_account(std::list<Account>::iterator it);
 
-    // Gets an account from account_id
-    std::optional<Account> get_account(const uint32_t account_id);
-
-    // Returns a list of Account objects from the name
-    std::optional<std::list<Account>> get_account_from_account_name(const std::string account_name);
-
-    // Deletes Account
-    void delete_account(const uint32_t account_id);
-
-    // Prints all accounts in alphabetical order
+    // Prints all accounts in alp   habetical order
     friend std::ostream& operator<<(std::ostream& os, const Accounts& accounts);
 
     // Iterators
