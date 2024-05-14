@@ -21,7 +21,7 @@ public:
     ~Accounts();
 
     // Getter
-    std::list<Account> get_accounts() const;
+    const std::list<Account>& get_accounts() const;
 
     // Add Account
     void add_account(Account account);

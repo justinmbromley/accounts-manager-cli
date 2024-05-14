@@ -7,13 +7,11 @@
 // Tests the creation and destruction of Accounts with getters
 TEST(Constructor, NoAddedAccounts) {
     Accounts accounts;
-
-    // Tests if the beginning iterator is equal to the end iterator to test if it's empty
-    bool result = accounts.get_accounts().empty();
-    EXPECT_TRUE(result);
+    std::list<Account> result = accounts.get_accounts();
+    ASSERT_TRUE(result.empty());
 }
 
 int main(int argc, char **argv) {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+        ::testing::InitGoogleTest(&argc, argv);
+        return RUN_ALL_TESTS();
 }

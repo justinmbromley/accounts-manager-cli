@@ -12,7 +12,7 @@ Accounts::Accounts() {}
 Accounts::~Accounts() {}
 
 // Getter
-std::list<Account> Accounts::get_accounts() const {
+const std::list<Account>& Accounts::get_accounts() const {
     return accounts;
 }
 
