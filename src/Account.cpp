@@ -6,6 +6,11 @@ Account::Account(uint32_t account_id, std::string account_name, std::vector<std:
     : account_id(account_id), account_name(account_name), account_details(account_details), account_time_last_edited(account_time_last_edited) {
 }
 
+// Copy constructor
+Account::Account(const Account& account) : account_id(account.account_id), account_name(account.account_name), 
+    account_details(account.account_details), account_time_last_edited(account.account_time_last_edited) {
+}
+
 // Destructor
 Account::~Account() {
     std::cout << "Account has been destructed\n";

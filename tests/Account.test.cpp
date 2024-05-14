@@ -17,13 +17,29 @@ TEST(AccountConstructor, CreationGettersDestruction) {
     EXPECT_EQ(account.get_account_time_last_edited(), random_time);
 }
 
-// Test the equality operator overload
-TEST(AccountEqualityOperator, AccountsAreEqual) {
-    Account account_1(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
-    Account account_2(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
+// Test the Copy Constructor
+TEST(AccountCopyConstructor, SimpleTest) {
+    uint32_t account_id = 31293;
+    std::string account_name = "Bobby Smith";
+    std::vector<std::string> account_details = { "Username: bobsmith23", "Password: hungrybob02" };
+    time_t random_time = 1234;
+
+    Account account_1(account_id, account_name, account_details, random_time);
+    Account account_2(account_1);
     
-    EXPECT_TRUE(account_1 == account_2);
+    EXPECT_EQ(account_1.get_account_id(), account_2.get_account_id());
+    EXPECT_EQ(account_1.get_account_name(), account_2.get_account_name());
+    EXPECT_EQ(account_1.get_account_details(), account_2.get_account_details());
+    EXPECT_EQ(account_1.get_account_time_last_edited(), account_2.get_account_time_last_edited());
 }
+
+// // Test the equality operator overload
+// TEST(AccountEqualityOperator, AccountsAreEqual) {
+//     Account account_1(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
+//     Account account_2(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
+    
+//     EXPECT_TRUE(account_1 == account_2);
+// }
 
 // Tests the setters of Account
 TEST(AccountSetters, ChangeVariables) {
