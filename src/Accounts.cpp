@@ -12,14 +12,16 @@ Accounts::Accounts() {}
 Accounts::~Accounts() {}
 
 // Getter
-const std::list<Account>& Accounts::get_accounts() const {
+const std::vector<Account>& Accounts::get_accounts() const {
     return accounts;
 }
 
 // Add Account
-void add_account(Account account) const {
-    
+void Accounts::add_account(Account account) const {
+
 }
+
+
 
 std::ostream& operator<<(std::ostream& os, const Accounts& accounts) {
     

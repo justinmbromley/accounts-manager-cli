@@ -323,6 +323,4 @@ CMakeFiles/accounts_test.dir/tests/Accounts.test.cpp.o: \
  /usr/local/include/gmock/gmock-more-matchers.h \
  /usr/local/include/gmock/gmock-nice-strict.h \
  /home/bromastone/Documents/cpp-projects/accounts-manager-cli/tests/../include/Account.h \
- /home/bromastone/Documents/cpp-projects/accounts-manager-cli/tests/../include/Accounts.h \
- /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
- /usr/include/c++/13/bits/list.tcc
+ /home/bromastone/Documents/cpp-projects/accounts-manager-cli/tests/../include/Accounts.h

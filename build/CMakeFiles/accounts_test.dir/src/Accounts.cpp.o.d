@@ -189,9 +189,7 @@ CMakeFiles/accounts_test.dir/src/Accounts.cpp.o: \
  /home/bromastone/Documents/cpp-projects/accounts-manager-cli/src/../include/Account.h \
  /usr/include/c++/13/ctime \
  /home/bromastone/Documents/cpp-projects/accounts-manager-cli/src/../include/Accounts.h \
- /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
- /usr/include/c++/13/bits/allocated_ptr.h \
- /usr/include/c++/13/ext/aligned_buffer.h \
- /usr/include/c++/13/bits/list.tcc /usr/include/c++/13/variant \
+ /usr/include/c++/13/variant \
  /usr/include/c++/13/bits/enable_special_members.h \
- /usr/include/c++/13/bits/parse_numbers.h /usr/include/c++/13/optional
+ /usr/include/c++/13/bits/parse_numbers.h \
+ /usr/include/c++/13/ext/aligned_buffer.h /usr/include/c++/13/optional
