@@ -36,5 +36,5 @@ bool Account::operator==(const Account& account) const {
 }
 
 bool Account::operator!=(const Account& account) const {
-
+    return 0;
 }
