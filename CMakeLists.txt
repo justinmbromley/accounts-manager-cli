@@ -1,6 +1,6 @@
 # CMake version
 cmake_minimum_required(VERSION 3.29.2)
-project(int_add)
+project(accounts_manager_cli)
 
 # C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -33,8 +33,6 @@ add_executable(
     ${src_dir}/Accounts.cpp
     ${test_dir}/Accounts.test.cpp
 )
-
-# include(GoogleTest)
 
 target_link_libraries(
     account_test
