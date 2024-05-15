@@ -57,7 +57,7 @@ TEST(AccountInequalityOperator, AccountsAreNotEqual) {
     EXPECT_TRUE(account_1 != account_2);
 }
 
-// Test the equality operator overload
+// Test the inequality operator overload
 TEST(AccountInequalityOperator, AccountsAreEqual) {
     Account account_1(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
     Account account_2(1984, "Stake", { "Email: Jordan Bellton", "Username: jbellton24", "Password: jbjbjbjb", "Password: Goodstuff" }, 4321);
