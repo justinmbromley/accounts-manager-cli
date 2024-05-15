@@ -20,8 +20,6 @@ TEST(AddAccount, AddingOneAccount) {
 
     std::vector<Account> result_vector = accounts.get_accounts();
     std::cout << "RESULT SIZE: " << result_vector.size() << std::endl;
-
-    
 }
 
 int main(int argc, char **argv) {

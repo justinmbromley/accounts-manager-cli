@@ -12,9 +12,7 @@ Account::Account(const Account& account) : account_id(account.account_id), accou
 }
 
 // Destructor
-Account::~Account() {
-    std::cout << "Account has been destructed\n";
-}
+Account::~Account() {}
 
 // Getters
 uint32_t Account::get_account_id() const { return this->account_id; }

@@ -42,7 +42,7 @@ TEST(AccountCopyConstructor, SimpleTest) {
 // }
 
 // Tests the setters of Account
-TEST(AccountSetters, ChangeVariables) {
+TEST(AccountSetters, SimpleTest) {
     uint32_t account_id = 39293;
     std::string account_name = "Gmail";
     std::vector<std::string> account_details = { "Email: greghill10@gmail.com", "Password: password10" };

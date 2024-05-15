@@ -7,7 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/accounts_test.dir/tests/Accounts.test.cpp.o.d"
   "accounts_test"
   "accounts_test.pdb"
-  "accounts_test[1]_tests.cmake"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -7,11 +7,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Defining source and test directories
-# set(include_dir "${CMAKE_CURRENT_SOURCE_DIR/include}")
 set(src_dir ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set(test_dir ${CMAKE_CURRENT_SOURCE_DIR}/tests)
-
-
 
 # TESTING
 include(FetchContent)
@@ -37,44 +34,14 @@ add_executable(
     ${test_dir}/Accounts.test.cpp
 )
 
-add_executable(
-    account_id_generator_test
-    ${src_dir}/AccountIDGenerator.cpp
-    ${test_dir}/AccountIDGenerator.test.cpp
-)
-
-add_executable(
-    account_id_validator
-    ${src_dir}/AccountIDValidator.cpp
-    ${test_dir}/AccountIDValidator.test.cpp
-)
-
-include(GoogleTest)
+# include(GoogleTest)
 
 target_link_libraries(
-	accounts_test
-	GTest::gtest_main
+    account_test
+    GTest::gtest_main
 )
 
 target_link_libraries(
-	account_test
-	GTest::gtest_main
+    accounts_test
+    GTest::gtest_main
 )
-
-target_link_libraries(
-	account_id_generator_test
-	GTest::gtest_main
-)
-
-target_link_libraries(
-	account_id_validator
-	GTest::gtest_main
-)
-
-include(GoogleTest)
-gtest_discover_tests(account_test)
-gtest_discover_tests(accounts_test)
-
-
-# SOURCE TODO
-# add_executable()
