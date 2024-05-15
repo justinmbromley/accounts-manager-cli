@@ -29,6 +29,10 @@ void Account::set_account_time_last_edited(const time_t& account_time_last_edite
 
 
 // Equality operator overload
-bool Account::operator==(const Account& acc) const {
-    return false;
+bool Account::operator==(const Account& account) const {
+    return (this->account_id == account.account_id
+        && this->get_account_name() == account.get_account_name()
+        && this->get_account_details() == account.get_account_details()
+        && this->get_account_time_last_edited() == account.get_account_time_last_edited()
+    );
 }

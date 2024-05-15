@@ -1,5 +1,0 @@
-if(EXISTS "/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/accounts_test[1]_tests.cmake")
-  include("/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/accounts_test[1]_tests.cmake")
-else()
-  add_test(accounts_test_NOT_BUILT accounts_test_NOT_BUILT)
-endif()
