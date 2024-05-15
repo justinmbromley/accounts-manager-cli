@@ -26,8 +26,6 @@ void Account::set_account_name(const std::string& account_name) { this->account_
 void Account::set_account_details(const std::vector<std::string>& account_details) { this->account_details = account_details; }
 void Account::set_account_time_last_edited(const time_t& account_time_last_edited) { this->account_time_last_edited = account_time_last_edited; }
 
-
-
 // Equality operator overload
 bool Account::operator==(const Account& account) const {
     return (this->account_id == account.account_id
@@ -35,4 +33,8 @@ bool Account::operator==(const Account& account) const {
         && this->get_account_details() == account.get_account_details()
         && this->get_account_time_last_edited() == account.get_account_time_last_edited()
     );
+}
+
+bool Account::operator!=(const Account& account) const {
+    return (*this == account);
 }
