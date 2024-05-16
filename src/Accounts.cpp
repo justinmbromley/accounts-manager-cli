@@ -29,9 +29,16 @@ void Accounts::delete_account(std::vector<Account>::iterator it) {
     accounts.erase(it);
 }
 
+// Equality operator
 bool Accounts::operator==(const Accounts& accounts) const {
     return this->accounts == accounts.accounts;
 }
+
+// Inequality operator
+bool Accounts::operator!=(const Accounts& accounts) const {
+    return 1;
+}
+
 
 // Iterators
 std::vector<Account>::iterator Accounts::begin() {

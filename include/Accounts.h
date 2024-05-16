@@ -31,6 +31,9 @@ public:
 
     bool operator==(const Accounts& accounts) const;
 
+    bool operator!=(const Accounts& accounts) const;
+
+
     // Iterators
     std::vector<Account>::iterator begin();
     std::vector<Account>::iterator end();
