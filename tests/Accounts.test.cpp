@@ -136,8 +136,6 @@ TEST(AccountsEqualityOperator, EmptyAccounts) {
     EXPECT_TRUE(accounts_1 == accounts_2);
 }
 
-
-
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
