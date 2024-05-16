@@ -24,10 +24,10 @@ public:
     ~Accounts();
     
     // Add Account
-    void add_account(Account account) const;
+    void add_account(Account account);
 
     // Deletes an account
-    void delete_account(std::vector<Account>::iterator it) const;
+    void delete_account(std::vector<Account>::iterator it);
 
     // Prints all accounts in alp   habetical order
     friend std::ostream& operator<<(std::ostream& os, const Accounts& accounts);
