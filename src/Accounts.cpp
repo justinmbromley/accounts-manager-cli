@@ -17,8 +17,16 @@ Accounts::~Accounts() {}
 // }
 
 // Add Account
-void Accounts::add_account(Account account) const {
+void Accounts::add_account(Account account) {
+    accounts.push_back(account);
+}
 
+// Deletes an account
+void Accounts::delete_account(std::vector<Account>::iterator it) {
+    if (accounts.empty()) {
+        throw std::out_of_range("Trying to delete past the end element");
+    }
+    accounts.erase(it);
 }
 
 std::ostream& operator<<(std::ostream& os, const Accounts& accounts) {
