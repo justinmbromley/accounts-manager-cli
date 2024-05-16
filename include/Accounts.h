@@ -17,12 +17,12 @@ public:
     // Constructor
     Accounts();
 
+    // Copy constructor
+    Accounts(const Accounts& accounts);
+
     // Destructor
     ~Accounts();
-
-    // Getter
-    const std::vector<Account>& get_accounts() const;
-
+    
     // Add Account
     void add_account(Account account) const;
 
@@ -33,10 +33,10 @@ public:
     friend std::ostream& operator<<(std::ostream& os, const Accounts& accounts);
 
     // Iterators
-    std::vector<Account>::iterator begin() { return accounts.begin(); }
-    std::vector<Account>::iterator end() { return accounts.end(); }
-    std::vector<Account>::const_iterator cbegin() const { return accounts.cbegin(); }
-    std::vector<Account>::const_iterator cend() const { return accounts.cend(); }
+    std::vector<Account>::iterator begin();
+    std::vector<Account>::iterator end();
+    std::vector<Account>::const_iterator cbegin() const;
+    std::vector<Account>::const_iterator cend() const;
 
 private:
     std::vector<Account> accounts;

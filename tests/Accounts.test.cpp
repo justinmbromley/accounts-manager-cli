@@ -4,23 +4,37 @@
 #include "../include/Account.h"
 #include "../include/Accounts.h"
 
-// Tests the creation and destruction of Accounts with getters
-TEST(Constructor, NoAddedAccounts) {
+// Test the begin iterator
+
+TEST(AccountsBegin, EmptyAccounts) {
     Accounts accounts;
-    std::vector<Account> result = accounts.get_accounts();
-    ASSERT_TRUE(result.empty());
+    std::vector<Account>::iterator it = accounts.begin();
+    EXPECT_TRUE(it == accounts.end());
 }
 
-// Tests adding one account
-TEST(AddAccount, AddingOneAccount) {
+TEST(AccountsCBegin, EmptyAccounts) {
     Accounts accounts;
-
-    Account account(123, "DET login", { "Email: helloman@email.com", "Password: hellowoman" }, 12345);
-    accounts.add_account(account);
-
-    std::vector<Account> result_vector = accounts.get_accounts();
-    std::cout << "RESULT SIZE: " << result_vector.size() << std::endl;
+    std::vector<Account>::const_iterator it = accounts.cbegin();
+    EXPECT_TRUE(it == accounts.cend());
 }
+
+// // Tests the creation and destruction of Accounts with getters
+// TEST(Constructor, NoAddedAccounts) {
+//     Accounts accounts;
+//     std::vector<Account> result = accounts.get_accounts();
+//     ASSERT_TRUE(result.empty());
+// }
+
+// // Tests adding one account
+// TEST(AddAccount, AddingOneAccount) {
+//     Accounts accounts;
+
+//     Account account(123, "DET login", { "Email: helloman@email.com", "Password: hellowoman" }, 12345);
+//     accounts.add_account(account);
+
+//     std::vector<Account> result_vector = accounts.get_accounts();
+//     std::cout << "RESULT SIZE: " << result_vector.size() << std::endl;
+// }
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
