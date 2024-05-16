@@ -86,10 +86,7 @@ TEST(AccountsDeleteAccount, DeletingMultipleAccounts) {
 
 TEST(AccountsDeleteAccount, DeletingFromAnEmptyList) {
     Accounts accounts;
-
     std::vector<Account>::iterator it = accounts.begin();
-    
-    // EXPECT_EQ(accounts.cbegin(), accounts.cend());
     EXPECT_THROW(accounts.delete_account(it), std::out_of_range);
 }
 
