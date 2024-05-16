@@ -36,7 +36,7 @@ bool Accounts::operator==(const Accounts& accounts) const {
 
 // Inequality operator
 bool Accounts::operator!=(const Accounts& accounts) const {
-    return 1;
+    return this->accounts != accounts.accounts;
 }
 
 
