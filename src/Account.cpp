@@ -38,3 +38,11 @@ bool Account::operator==(const Account& account) const {
 bool Account::operator!=(const Account& account) const {
     return (*this == account);
 }
+
+// Equals operator overload
+void Account::operator=(const Account& account) {
+    this->account_id = account.account_id;
+    this->account_name = account.account_name;
+    this->account_details = account.account_details;
+    this->account_time_last_edited = account.account_time_last_edited;
+}

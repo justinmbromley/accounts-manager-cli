@@ -65,15 +65,10 @@ TEST(AccountInequalityOperator, AccountsAreEqual) {
     EXPECT_TRUE(!(account_1 != account_2));
 }
 
-
 // Tests the setters of Account
 TEST(AccountSetters, SimpleTest) {
-    uint32_t account_id = 39293;
-    std::string account_name = "Gmail";
-    std::vector<std::string> account_details = { "Email: greghill10@gmail.com", "Password: password10" };
-    time_t random_time = 1234;
+    Account account(39293, "Gmail", { "Email: greghill10@gmail.com", "Password: password10" }, 1234);
 
-    Account account(account_id, account_name, account_details, random_time);
 
     uint32_t new_account_id = 123456;
     std::string new_account_name = "Hotmail";
@@ -89,6 +84,21 @@ TEST(AccountSetters, SimpleTest) {
     EXPECT_EQ(account.get_account_name(), new_account_name);
     EXPECT_EQ(account.get_account_details(), new_account_details);
     EXPECT_EQ(account.get_account_time_last_edited(), new_random_time);
+}
+
+// Test the assignment overload
+TEST(AccountAssignmentOperator, AssignToNewVariable) {
+    Account account_1(39293, "Gmail", { "Email: greghill10@gmail.com", "Password: password10" }, 1234);
+    Account account_2 = account_1;
+    EXPECT_EQ(account_1, account_2);
+}
+
+TEST(AccountAssignmentOperator, MultipleReassignments) {
+    Account account_1(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
+    Account account_2(1984, "Stake", { "Email: Jordan Bellton", "Username: jbellton24", "Password: jbjbjbjb", "Password: Goodstuff" }, 4321);
+    Account account_3 = account_1;
+    account_3 = account_2;
+    EXPECT_EQ(account_3, account_2);
 }
 
 int main(int argc, char **argv) {

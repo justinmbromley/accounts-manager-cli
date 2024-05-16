@@ -30,10 +30,13 @@
         void set_account_time_last_edited(const time_t& account_time_last_edited);
 
         // Equality operator overload
-        bool operator==(const Account& acc) const;
+        bool operator==(const Account& account) const;
 
         // Inequality operator overload
         bool operator!=(const Account& account) const;
+
+        // Assignment operator
+        void operator=(const Account& account);
 
     private:
         uint32_t account_id;
