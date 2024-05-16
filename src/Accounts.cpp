@@ -29,8 +29,8 @@ void Accounts::delete_account(std::vector<Account>::iterator it) {
     accounts.erase(it);
 }
 
-std::ostream& operator<<(std::ostream& os, const Accounts& accounts) {
-    return os;
+bool Accounts::operator==(const Accounts& accounts) const {
+    return this->accounts == accounts.accounts;
 }
 
 // Iterators

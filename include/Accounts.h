@@ -29,8 +29,7 @@ public:
     // Deletes an account
     void delete_account(std::vector<Account>::iterator it);
 
-    // Prints all accounts in alp   habetical order
-    friend std::ostream& operator<<(std::ostream& os, const Accounts& accounts);
+    bool operator==(const Accounts& accounts) const;
 
     // Iterators
     std::vector<Account>::iterator begin();
