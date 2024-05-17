@@ -41,6 +41,7 @@ bool Accounts::operator!=(const Accounts& accounts) const {
 
 // Assignment operator
 void Accounts::operator=(const Accounts& accounts) {
+    this->accounts = accounts.accounts;
 }
 
 
