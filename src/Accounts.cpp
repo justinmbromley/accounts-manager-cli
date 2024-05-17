@@ -8,13 +8,13 @@
 // Constructor
 Accounts::Accounts() {}
 
+// Copy constructor
+Accounts::Accounts(const Accounts& accounts) {
+    this->accounts = accounts.accounts;
+}
+
 // Destructor
 Accounts::~Accounts() {}
-
-// // Getter
-// const std::vector<Account>& Accounts::get_accounts() const {
-//     return accounts;
-// }
 
 // Add Account
 void Accounts::add_account(Account account) {
@@ -24,7 +24,7 @@ void Accounts::add_account(Account account) {
 // Deletes an account
 void Accounts::delete_account(std::vector<Account>::iterator it) {
     if (accounts.empty()) {
-        throw std::out_of_range("Trying to delete past the end element");
+        throw std::logic_error("Trying to delete past the end element");
     }
     accounts.erase(it);
 }
@@ -43,7 +43,6 @@ bool Accounts::operator!=(const Accounts& accounts) const {
 void Accounts::operator=(const Accounts& accounts) {
     this->accounts = accounts.accounts;
 }
-
 
 // Iterators
 std::vector<Account>::iterator Accounts::begin() {
