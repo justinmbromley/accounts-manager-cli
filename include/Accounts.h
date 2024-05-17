@@ -29,10 +29,10 @@ public:
     // Deletes an account
     void delete_account(std::vector<Account>::iterator it);
 
+    // Operators
     bool operator==(const Accounts& accounts) const;
-
     bool operator!=(const Accounts& accounts) const;
-
+    void operator=(const Accounts& accounts);
 
     // Iterators
     std::vector<Account>::iterator begin();

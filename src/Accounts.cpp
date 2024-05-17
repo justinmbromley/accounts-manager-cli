@@ -39,6 +39,11 @@ bool Accounts::operator!=(const Accounts& accounts) const {
     return this->accounts != accounts.accounts;
 }
 
+// Assignment operator
+void Accounts::operator=(const Accounts& accounts) {
+    this->accounts = accounts.accounts;
+}
+
 
 // Iterators
 std::vector<Account>::iterator Accounts::begin() {
