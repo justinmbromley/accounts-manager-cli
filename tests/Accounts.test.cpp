@@ -154,7 +154,6 @@ TEST(AccountsInequalityOperator, AccountsAreNotEqual) {
     EXPECT_TRUE(accounts_1 != accounts_2);
 }
 
-
 TEST(AccountsInequalityOperator, AccountsAreEqual) {
     Accounts accounts_1;
     Accounts accounts_2;
@@ -183,6 +182,44 @@ TEST(AccountsInequalityOperator, EmptyAccount) {
     accounts_2.add_account(account);
 
     EXPECT_TRUE(accounts_1 != accounts_2);
+}
+
+TEST(AccountsAssignmentOperator, Assignment) {
+    Accounts accounts_1;
+    Accounts accounts_2;
+
+    Account account_1(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
+    Account account_2(1984, "Stake", { "Email: Jordan Bellton", "Username: jbellton24", "Password: jbjbjbjb", "Password: Goodstuff" }, 4321);
+    Account account_3(123, "DET login", { "Email: helloman@email.com", "Password: hellowoman" }, 929382);
+    Account account_4(49392, "Loreal", { "Loreal Special Number: 23432", "Secret shape: octagon", "Metal: shoegaze" }, 43123);
+
+    accounts_1.add_account(account_1);
+    accounts_1.add_account(account_2);
+    accounts_2.add_account(account_3);
+    accounts_2.add_account(account_4);
+
+    accounts_1 = accounts_2;
+
+    EXPECT_TRUE(accounts_1 == accounts_2);
+}
+
+TEST(AccountsAssignmentOperator, EmptyAssignment) {
+    Accounts accounts_1;
+    Accounts accounts_2;
+
+    Account account_1(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
+    Account account_2(1984, "Stake", { "Email: Jordan Bellton", "Username: jbellton24", "Password: jbjbjbjb", "Password: Goodstuff" }, 4321);
+    Account account_3(123, "DET login", { "Email: helloman@email.com", "Password: hellowoman" }, 929382);
+    Account account_4(49392, "Loreal", { "Loreal Special Number: 23432", "Secret shape: octagon", "Metal: shoegaze" }, 43123);
+
+    accounts_1.add_account(account_1);
+    accounts_1.add_account(account_2);
+    accounts_1.add_account(account_3);
+    accounts_1.add_account(account_4);
+
+    accounts_1 = accounts_2;
+
+    EXPECT_EQ(accounts_1.cbegin(), accounts_1.cend());
 }
 
 int main(int argc, char **argv) {
