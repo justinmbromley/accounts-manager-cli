@@ -224,6 +224,19 @@ account_id_generator_test/fast:
 .PHONY : account_id_generator_test/fast
 
 #=============================================================================
+# Target rules for targets named new_account_id_generator_test
+
+# Build rule for target.
+new_account_id_generator_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 new_account_id_generator_test
+.PHONY : new_account_id_generator_test
+
+# fast build rule for target.
+new_account_id_generator_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/build
+.PHONY : new_account_id_generator_test/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -283,6 +296,7 @@ src/Account.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_test.dir/build.make CMakeFiles/account_test.dir/src/Account.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_test.dir/build.make CMakeFiles/accounts_test.dir/src/Account.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Account.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Account.cpp.o
 .PHONY : src/Account.cpp.o
 
 src/Account.i: src/Account.cpp.i
@@ -293,6 +307,7 @@ src/Account.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_test.dir/build.make CMakeFiles/account_test.dir/src/Account.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_test.dir/build.make CMakeFiles/accounts_test.dir/src/Account.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Account.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Account.cpp.i
 .PHONY : src/Account.cpp.i
 
 src/Account.s: src/Account.cpp.s
@@ -303,6 +318,7 @@ src/Account.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_test.dir/build.make CMakeFiles/account_test.dir/src/Account.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_test.dir/build.make CMakeFiles/accounts_test.dir/src/Account.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Account.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Account.cpp.s
 .PHONY : src/Account.cpp.s
 
 src/AccountIDGenerator.o: src/AccountIDGenerator.cpp.o
@@ -311,6 +327,7 @@ src/AccountIDGenerator.o: src/AccountIDGenerator.cpp.o
 # target to build an object file
 src/AccountIDGenerator.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_generator_test.dir/build.make CMakeFiles/account_id_generator_test.dir/src/AccountIDGenerator.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/AccountIDGenerator.cpp.o
 .PHONY : src/AccountIDGenerator.cpp.o
 
 src/AccountIDGenerator.i: src/AccountIDGenerator.cpp.i
@@ -319,6 +336,7 @@ src/AccountIDGenerator.i: src/AccountIDGenerator.cpp.i
 # target to preprocess a source file
 src/AccountIDGenerator.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_generator_test.dir/build.make CMakeFiles/account_id_generator_test.dir/src/AccountIDGenerator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/AccountIDGenerator.cpp.i
 .PHONY : src/AccountIDGenerator.cpp.i
 
 src/AccountIDGenerator.s: src/AccountIDGenerator.cpp.s
@@ -327,6 +345,7 @@ src/AccountIDGenerator.s: src/AccountIDGenerator.cpp.s
 # target to generate assembly for a file
 src/AccountIDGenerator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_generator_test.dir/build.make CMakeFiles/account_id_generator_test.dir/src/AccountIDGenerator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/AccountIDGenerator.cpp.s
 .PHONY : src/AccountIDGenerator.cpp.s
 
 src/AccountIDValidator.o: src/AccountIDValidator.cpp.o
@@ -335,6 +354,7 @@ src/AccountIDValidator.o: src/AccountIDValidator.cpp.o
 # target to build an object file
 src/AccountIDValidator.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/AccountIDValidator.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/AccountIDValidator.cpp.o
 .PHONY : src/AccountIDValidator.cpp.o
 
 src/AccountIDValidator.i: src/AccountIDValidator.cpp.i
@@ -343,6 +363,7 @@ src/AccountIDValidator.i: src/AccountIDValidator.cpp.i
 # target to preprocess a source file
 src/AccountIDValidator.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/AccountIDValidator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/AccountIDValidator.cpp.i
 .PHONY : src/AccountIDValidator.cpp.i
 
 src/AccountIDValidator.s: src/AccountIDValidator.cpp.s
@@ -351,6 +372,7 @@ src/AccountIDValidator.s: src/AccountIDValidator.cpp.s
 # target to generate assembly for a file
 src/AccountIDValidator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/AccountIDValidator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/AccountIDValidator.cpp.s
 .PHONY : src/AccountIDValidator.cpp.s
 
 src/Accounts.o: src/Accounts.cpp.o
@@ -360,6 +382,7 @@ src/Accounts.o: src/Accounts.cpp.o
 src/Accounts.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_test.dir/build.make CMakeFiles/accounts_test.dir/src/Accounts.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Accounts.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Accounts.cpp.o
 .PHONY : src/Accounts.cpp.o
 
 src/Accounts.i: src/Accounts.cpp.i
@@ -369,6 +392,7 @@ src/Accounts.i: src/Accounts.cpp.i
 src/Accounts.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_test.dir/build.make CMakeFiles/accounts_test.dir/src/Accounts.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Accounts.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Accounts.cpp.i
 .PHONY : src/Accounts.cpp.i
 
 src/Accounts.s: src/Accounts.cpp.s
@@ -378,7 +402,32 @@ src/Accounts.s: src/Accounts.cpp.s
 src/Accounts.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_test.dir/build.make CMakeFiles/accounts_test.dir/src/Accounts.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Accounts.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Accounts.cpp.s
 .PHONY : src/Accounts.cpp.s
+
+src/NewAccountIDGenerator.o: src/NewAccountIDGenerator.cpp.o
+.PHONY : src/NewAccountIDGenerator.o
+
+# target to build an object file
+src/NewAccountIDGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/NewAccountIDGenerator.cpp.o
+.PHONY : src/NewAccountIDGenerator.cpp.o
+
+src/NewAccountIDGenerator.i: src/NewAccountIDGenerator.cpp.i
+.PHONY : src/NewAccountIDGenerator.i
+
+# target to preprocess a source file
+src/NewAccountIDGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/NewAccountIDGenerator.cpp.i
+.PHONY : src/NewAccountIDGenerator.cpp.i
+
+src/NewAccountIDGenerator.s: src/NewAccountIDGenerator.cpp.s
+.PHONY : src/NewAccountIDGenerator.s
+
+# target to generate assembly for a file
+src/NewAccountIDGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/NewAccountIDGenerator.cpp.s
+.PHONY : src/NewAccountIDGenerator.cpp.s
 
 tests/Account.test.o: tests/Account.test.cpp.o
 .PHONY : tests/Account.test.o
@@ -476,6 +525,30 @@ tests/Accounts.test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_test.dir/build.make CMakeFiles/accounts_test.dir/tests/Accounts.test.cpp.s
 .PHONY : tests/Accounts.test.cpp.s
 
+tests/NewAccountIDGenerator.test.o: tests/NewAccountIDGenerator.test.cpp.o
+.PHONY : tests/NewAccountIDGenerator.test.o
+
+# target to build an object file
+tests/NewAccountIDGenerator.test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/tests/NewAccountIDGenerator.test.cpp.o
+.PHONY : tests/NewAccountIDGenerator.test.cpp.o
+
+tests/NewAccountIDGenerator.test.i: tests/NewAccountIDGenerator.test.cpp.i
+.PHONY : tests/NewAccountIDGenerator.test.i
+
+# target to preprocess a source file
+tests/NewAccountIDGenerator.test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/tests/NewAccountIDGenerator.test.cpp.i
+.PHONY : tests/NewAccountIDGenerator.test.cpp.i
+
+tests/NewAccountIDGenerator.test.s: tests/NewAccountIDGenerator.test.cpp.s
+.PHONY : tests/NewAccountIDGenerator.test.s
+
+# target to generate assembly for a file
+tests/NewAccountIDGenerator.test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/tests/NewAccountIDGenerator.test.cpp.s
+.PHONY : tests/NewAccountIDGenerator.test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -497,6 +570,7 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... new_account_id_generator_test"
 	@echo "... src/Account.o"
 	@echo "... src/Account.i"
 	@echo "... src/Account.s"
@@ -509,6 +583,9 @@ help:
 	@echo "... src/Accounts.o"
 	@echo "... src/Accounts.i"
 	@echo "... src/Accounts.s"
+	@echo "... src/NewAccountIDGenerator.o"
+	@echo "... src/NewAccountIDGenerator.i"
+	@echo "... src/NewAccountIDGenerator.s"
 	@echo "... tests/Account.test.o"
 	@echo "... tests/Account.test.i"
 	@echo "... tests/Account.test.s"
@@ -521,6 +598,9 @@ help:
 	@echo "... tests/Accounts.test.o"
 	@echo "... tests/Accounts.test.i"
 	@echo "... tests/Accounts.test.s"
+	@echo "... tests/NewAccountIDGenerator.test.o"
+	@echo "... tests/NewAccountIDGenerator.test.i"
+	@echo "... tests/NewAccountIDGenerator.test.s"
 .PHONY : help
 
 
