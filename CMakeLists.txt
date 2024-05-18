@@ -42,6 +42,12 @@ add_executable(
     ${test_dir}/AccountIDValidator.test.cpp
 )
 
+add_executable(
+    account_id_generator_test
+    ${src_dir}/AccountIDGenerator.cpp
+    ${test_dir}/AccountIDGenerator.test.cpp
+)
+
 target_link_libraries(
     account_test
     GTest::gtest_main
@@ -54,5 +60,10 @@ target_link_libraries(
 
 target_link_libraries(
     account_id_validator_test
+    GTest::gtest_main
+)
+
+target_link_libraries(
+    account_id_generator_test
     GTest::gtest_main
 )
