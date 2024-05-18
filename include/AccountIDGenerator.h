@@ -5,7 +5,11 @@
 
 class AccountIDGenerator {
 public:
-    // Generate a new Account ID
+    /**
+     * Generates a new 32-bit Account ID
+     * 
+     * @return random 32-bit integer
+    */
     uint32_t generate_new_id(); 
 };
 
