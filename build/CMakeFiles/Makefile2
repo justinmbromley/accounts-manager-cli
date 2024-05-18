@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/bromastone/Documents/cpp-projects/accounts-manager-cli/
 # The main recursive "all" target.
 all: CMakeFiles/account_test.dir/all
 all: CMakeFiles/accounts_test.dir/all
+all: CMakeFiles/account_id_validator_test.dir/all
 all: _deps/googletest-build/all
 .PHONY : all
 
@@ -75,6 +76,7 @@ preinstall: _deps/googletest-build/preinstall
 # The main recursive "clean" target.
 clean: CMakeFiles/account_test.dir/clean
 clean: CMakeFiles/accounts_test.dir/clean
+clean: CMakeFiles/account_id_validator_test.dir/clean
 clean: _deps/googletest-build/clean
 .PHONY : clean
 
@@ -137,7 +139,7 @@ CMakeFiles/account_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gt
 CMakeFiles/account_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_test.dir/build.make CMakeFiles/account_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_test.dir/build.make CMakeFiles/account_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=1,2,3 "Built target account_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=6,7,8 "Built target account_test"
 .PHONY : CMakeFiles/account_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -164,7 +166,7 @@ CMakeFiles/accounts_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/g
 CMakeFiles/accounts_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_test.dir/build.make CMakeFiles/accounts_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_test.dir/build.make CMakeFiles/accounts_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=4,5,6,7 "Built target accounts_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=9,10,11,12 "Built target accounts_test"
 .PHONY : CMakeFiles/accounts_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -184,13 +186,40 @@ CMakeFiles/accounts_test.dir/clean:
 .PHONY : CMakeFiles/accounts_test.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/account_id_validator_test.dir
+
+# All Build rule for target.
+CMakeFiles/account_id_validator_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+CMakeFiles/account_id_validator_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target account_id_validator_test"
+.PHONY : CMakeFiles/account_id_validator_test.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/account_id_validator_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/account_id_validator_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles 0
+.PHONY : CMakeFiles/account_id_validator_test.dir/rule
+
+# Convenience name for target.
+account_id_validator_test: CMakeFiles/account_id_validator_test.dir/rule
+.PHONY : account_id_validator_test
+
+# clean rule for target.
+CMakeFiles/account_id_validator_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/clean
+.PHONY : CMakeFiles/account_id_validator_test.dir/clean
+
+#=============================================================================
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
 
 # All Build rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=8,9 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=13,14 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -213,11 +242,11 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
+_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=10,11 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=15,16 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -243,7 +272,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=12,13 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=17,18 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -269,7 +298,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=14,15 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles --progress-num=19,20 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
