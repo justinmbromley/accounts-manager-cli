@@ -25,8 +25,7 @@ void Accounts::delete_account(const std::vector<Account>::iterator it) {
 }
 
 bool Accounts::empty() const {
-    // return accounts.empty();
-    return 1;
+    return accounts.empty();
 }
 
 bool Accounts::operator==(const Accounts& accounts) const {
