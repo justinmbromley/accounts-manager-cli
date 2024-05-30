@@ -64,6 +64,27 @@ TEST(AccountsDeleteAccount, DeletingOneAccount) {
     EXPECT_EQ(accounts.cbegin(), accounts.cend());
 }
 
+// Accounts Empty
+TEST(AccountsEmpty, AccountsAreEmpty) {
+    Accounts accounts;
+
+    EXPECT_TRUE(accounts.empty());
+}
+
+TEST(AccountsEmpty, AccountsAreNotEmpty) {
+    Accounts accounts;
+
+    Account account_1(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
+    Account account_2(1984, "Stake", { "Email: Jordan Bellton", "Username: jbellton24", "Password: jbjbjbjb", "Password: Goodstuff" }, 4321);
+    Account account_3(123, "DET login", { "Email: helloman@email.com", "Password: hellowoman" }, 929382);
+
+    accounts.add_account(account_1);
+    accounts.add_account(account_2);
+    accounts.add_account(account_3);
+
+    EXPECT_TRUE(!accounts.empty());
+}
+
 // Adds three accounts, deletes two of them, and sees if one remains
 TEST(AccountsDeleteAccount, DeletingMultipleAccounts) {
     Accounts accounts;

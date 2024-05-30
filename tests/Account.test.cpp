@@ -17,21 +17,53 @@ TEST(AccountConstructor, CreationGettersDestruction) {
     EXPECT_EQ(account.get_account_time_last_edited(), random_time);
 }
 
+// Tests the creation and destruction of Account with getters
+TEST(AccountConstructor, BlankAccount) {
+    uint32_t account_id;
+    std::string account_name;
+    std::vector<std::string> account_details;
+    time_t random_time;
+
+    Account account(account_id, account_name, account_details, random_time);
+    
+    EXPECT_EQ(account.get_account_id(), account_id);
+    EXPECT_EQ(account.get_account_name(), account_name);
+    EXPECT_EQ(account.get_account_details(), account_details);
+    EXPECT_EQ(account.get_account_time_last_edited(), random_time);
+}
+
 // Test the Copy Constructor
-TEST(AccountCopyConstructor, SimpleTest) {
+TEST(AccountCopyConstructor, Instantiate) {
     uint32_t account_id = 31293;
     std::string account_name = "Bobby Smith";
     std::vector<std::string> account_details = { "Username: bobsmith23", "Password: hungrybob02" };
     time_t random_time = 1234;
 
     Account account_1(account_id, account_name, account_details, random_time);
-    Account account_2(account_1);
+    Account account_2 = account_1;
     
     EXPECT_EQ(account_1.get_account_id(), account_2.get_account_id());
     EXPECT_EQ(account_1.get_account_name(), account_2.get_account_name());
     EXPECT_EQ(account_1.get_account_details(), account_2.get_account_details());
     EXPECT_EQ(account_1.get_account_time_last_edited(), account_2.get_account_time_last_edited());
 }
+
+// Test the Copy Constructor
+TEST(AccountCopyConstructor, Assignment) {
+    uint32_t account_id = 31293;
+    std::string account_name = "Bobby Smith";
+    std::vector<std::string> account_details = { "Username: bobsmith23", "Password: hungrybob02" };
+    time_t random_time(1234);
+
+    Account account_1(account_id, account_name, account_details, random_time);
+    Account account_2 = account_1;
+    
+    EXPECT_EQ(account_1.get_account_id(), account_2.get_account_id());
+    EXPECT_EQ(account_1.get_account_name(), account_2.get_account_name());
+    EXPECT_EQ(account_1.get_account_details(), account_2.get_account_details());
+    EXPECT_EQ(account_1.get_account_time_last_edited(), account_2.get_account_time_last_edited());
+}
+
 
 // Test the equality operator overload
 TEST(AccountEqualityOperator, AccountsAreEqual) {
@@ -68,7 +100,6 @@ TEST(AccountInequalityOperator, AccountsAreEqual) {
 // Tests the setters of Account
 TEST(AccountSetters, SimpleTest) {
     Account account(39293, "Gmail", { "Email: greghill10@gmail.com", "Password: password10" }, 1234);
-
 
     uint32_t new_account_id = 123456;
     std::string new_account_name = "Hotmail";
