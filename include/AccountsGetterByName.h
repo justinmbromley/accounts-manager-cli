@@ -15,7 +15,7 @@ public:
      * @param Accounts A const reference to an object of type Accounts
      * @return A list of objects of type Account
     */
-    const Accounts& get_accounts_by_name(const std::string account_name, const Accounts& accounts) const;
+    const Accounts get_accounts_by_name(const std::string account_name, const Accounts& accounts) const;
 };
 
 #endif // ACCOUNTSGETTERBYNAME_H
