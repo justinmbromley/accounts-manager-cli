@@ -86,6 +86,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/account_id_generator_test.dir/DependInfo.cmake"
   "CMakeFiles/new_account_id_generator_test.dir/DependInfo.cmake"
   "CMakeFiles/accounts_getter_by_name_test.dir/DependInfo.cmake"
+  "CMakeFiles/account_updater_test.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"

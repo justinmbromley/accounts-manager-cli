@@ -66,6 +66,14 @@ add_executable(
     ${test_dir}/AccountsGetterByName.test.cpp
 )
 
+add_executable(
+    account_updater_test
+    ${src_dir}/Account.cpp
+    ${src_dir}/Accounts.cpp
+    ${src_dir}/AccountUpdater.cpp
+    ${test_dir}/AccountUpdater.test.cpp
+)
+
 target_link_libraries(
     account_test
     GTest::gtest_main
@@ -93,5 +101,10 @@ target_link_libraries(
 
 target_link_libraries(
     accounts_getter_by_name_test
+    GTest::gtest_main
+)
+
+target_link_libraries(
+    account_updater_test
     GTest::gtest_main
 )

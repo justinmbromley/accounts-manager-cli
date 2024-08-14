@@ -4,6 +4,7 @@
 /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles/account_id_generator_test.dir
 /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles/new_account_id_generator_test.dir
 /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles/accounts_getter_by_name_test.dir
+/home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles/account_updater_test.dir
 /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles/test.dir
 /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles/edit_cache.dir
 /home/bromastone/Documents/cpp-projects/accounts-manager-cli/build/CMakeFiles/rebuild_cache.dir

@@ -250,6 +250,19 @@ accounts_getter_by_name_test/fast:
 .PHONY : accounts_getter_by_name_test/fast
 
 #=============================================================================
+# Target rules for targets named account_updater_test
+
+# Build rule for target.
+account_updater_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 account_updater_test
+.PHONY : account_updater_test
+
+# fast build rule for target.
+account_updater_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/build
+.PHONY : account_updater_test/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -311,6 +324,7 @@ src/Account.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Account.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Account.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_getter_by_name_test.dir/build.make CMakeFiles/accounts_getter_by_name_test.dir/src/Account.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/src/Account.cpp.o
 .PHONY : src/Account.cpp.o
 
 src/Account.i: src/Account.cpp.i
@@ -323,6 +337,7 @@ src/Account.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Account.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Account.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_getter_by_name_test.dir/build.make CMakeFiles/accounts_getter_by_name_test.dir/src/Account.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/src/Account.cpp.i
 .PHONY : src/Account.cpp.i
 
 src/Account.s: src/Account.cpp.s
@@ -335,6 +350,7 @@ src/Account.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Account.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Account.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_getter_by_name_test.dir/build.make CMakeFiles/accounts_getter_by_name_test.dir/src/Account.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/src/Account.cpp.s
 .PHONY : src/Account.cpp.s
 
 src/AccountIDGenerator.o: src/AccountIDGenerator.cpp.o
@@ -391,6 +407,30 @@ src/AccountIDValidator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/AccountIDValidator.cpp.s
 .PHONY : src/AccountIDValidator.cpp.s
 
+src/AccountUpdater.o: src/AccountUpdater.cpp.o
+.PHONY : src/AccountUpdater.o
+
+# target to build an object file
+src/AccountUpdater.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/src/AccountUpdater.cpp.o
+.PHONY : src/AccountUpdater.cpp.o
+
+src/AccountUpdater.i: src/AccountUpdater.cpp.i
+.PHONY : src/AccountUpdater.i
+
+# target to preprocess a source file
+src/AccountUpdater.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/src/AccountUpdater.cpp.i
+.PHONY : src/AccountUpdater.cpp.i
+
+src/AccountUpdater.s: src/AccountUpdater.cpp.s
+.PHONY : src/AccountUpdater.s
+
+# target to generate assembly for a file
+src/AccountUpdater.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/src/AccountUpdater.cpp.s
+.PHONY : src/AccountUpdater.cpp.s
+
 src/Accounts.o: src/Accounts.cpp.o
 .PHONY : src/Accounts.o
 
@@ -400,6 +440,7 @@ src/Accounts.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Accounts.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Accounts.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_getter_by_name_test.dir/build.make CMakeFiles/accounts_getter_by_name_test.dir/src/Accounts.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/src/Accounts.cpp.o
 .PHONY : src/Accounts.cpp.o
 
 src/Accounts.i: src/Accounts.cpp.i
@@ -411,6 +452,7 @@ src/Accounts.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Accounts.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Accounts.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_getter_by_name_test.dir/build.make CMakeFiles/accounts_getter_by_name_test.dir/src/Accounts.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/src/Accounts.cpp.i
 .PHONY : src/Accounts.cpp.i
 
 src/Accounts.s: src/Accounts.cpp.s
@@ -422,6 +464,7 @@ src/Accounts.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/src/Accounts.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_account_id_generator_test.dir/build.make CMakeFiles/new_account_id_generator_test.dir/src/Accounts.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/accounts_getter_by_name_test.dir/build.make CMakeFiles/accounts_getter_by_name_test.dir/src/Accounts.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/src/Accounts.cpp.s
 .PHONY : src/Accounts.cpp.s
 
 src/AccountsGetterByName.o: src/AccountsGetterByName.cpp.o
@@ -544,6 +587,30 @@ tests/AccountIDValidator.test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_id_validator_test.dir/build.make CMakeFiles/account_id_validator_test.dir/tests/AccountIDValidator.test.cpp.s
 .PHONY : tests/AccountIDValidator.test.cpp.s
 
+tests/AccountUpdater.test.o: tests/AccountUpdater.test.cpp.o
+.PHONY : tests/AccountUpdater.test.o
+
+# target to build an object file
+tests/AccountUpdater.test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/tests/AccountUpdater.test.cpp.o
+.PHONY : tests/AccountUpdater.test.cpp.o
+
+tests/AccountUpdater.test.i: tests/AccountUpdater.test.cpp.i
+.PHONY : tests/AccountUpdater.test.i
+
+# target to preprocess a source file
+tests/AccountUpdater.test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/tests/AccountUpdater.test.cpp.i
+.PHONY : tests/AccountUpdater.test.cpp.i
+
+tests/AccountUpdater.test.s: tests/AccountUpdater.test.cpp.s
+.PHONY : tests/AccountUpdater.test.s
+
+# target to generate assembly for a file
+tests/AccountUpdater.test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/account_updater_test.dir/build.make CMakeFiles/account_updater_test.dir/tests/AccountUpdater.test.cpp.s
+.PHONY : tests/AccountUpdater.test.cpp.s
+
 tests/Accounts.test.o: tests/Accounts.test.cpp.o
 .PHONY : tests/Accounts.test.o
 
@@ -632,6 +699,7 @@ help:
 	@echo "... account_id_generator_test"
 	@echo "... account_id_validator_test"
 	@echo "... account_test"
+	@echo "... account_updater_test"
 	@echo "... accounts_getter_by_name_test"
 	@echo "... accounts_test"
 	@echo "... gmock"
@@ -648,6 +716,9 @@ help:
 	@echo "... src/AccountIDValidator.o"
 	@echo "... src/AccountIDValidator.i"
 	@echo "... src/AccountIDValidator.s"
+	@echo "... src/AccountUpdater.o"
+	@echo "... src/AccountUpdater.i"
+	@echo "... src/AccountUpdater.s"
 	@echo "... src/Accounts.o"
 	@echo "... src/Accounts.i"
 	@echo "... src/Accounts.s"
@@ -666,6 +737,9 @@ help:
 	@echo "... tests/AccountIDValidator.test.o"
 	@echo "... tests/AccountIDValidator.test.i"
 	@echo "... tests/AccountIDValidator.test.s"
+	@echo "... tests/AccountUpdater.test.o"
+	@echo "... tests/AccountUpdater.test.i"
+	@echo "... tests/AccountUpdater.test.s"
 	@echo "... tests/Accounts.test.o"
 	@echo "... tests/Accounts.test.i"
 	@echo "... tests/Accounts.test.s"
