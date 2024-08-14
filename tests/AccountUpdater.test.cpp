@@ -6,7 +6,7 @@
 #include "../include/Accounts.h"
 #include "../include/AccountUpdater.h"
 
-// test get accounts by name
+// Update Test
 TEST(AccountsUpdaterUpdateAccountName, UpdateName) {
     Accounts accounts;
 
