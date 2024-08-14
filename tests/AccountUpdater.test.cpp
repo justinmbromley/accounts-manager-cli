@@ -27,18 +27,13 @@ TEST(AccountsUpdaterUpdateAccountName, UpdateName) {
 // Update Test
 TEST(AccountsUpdaterUpdateAccountName, UpdateDetails) {
     Accounts accounts;
-
     Account account(31293, "Bobby Smith", { "Username: bobsmith23", "Password: hungrybob02" }, 1234);
-
     accounts.add_account(account);
-
     AccountUpdater account_updater;
     account_updater.update_account_details(accounts, 31293, { "Username: johnnysmith32", "Password: dididid", "Location: Switzerland" });
-
     Account expected(31293, "Bobby Smith", { "Username: johnnysmith32", "Password: dididid", "Location: Switzerland" }, 1234);
 
     Account result = *(accounts.cbegin());
-    
     EXPECT_EQ(result, expected);
 }
 
